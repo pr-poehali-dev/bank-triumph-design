@@ -1,4 +1,3 @@
-
 import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 import type { Config } from "tailwindcss";
@@ -64,12 +63,10 @@ const config = {
           ring: "hsl(var(--sidebar-ring))",
         },
         triumph: {
-          yellow: "#FFD700",
-          black: "#1A1A1A",
-          darkYellow: "#D4AF37",
-          lightYellow: "#FFEA80",
-          gray: "#333333",
-          lightGray: "#F5F5F5"
+          yellow: "#FFCC00",
+          darkYellow: "#E6B800",
+          black: "#121212",
+          gray: "#222222"
         },
       },
       borderRadius: {
@@ -97,3 +94,4 @@ const config = {
 } satisfies Config;
 
 export default config;
+}
