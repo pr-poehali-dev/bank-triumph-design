@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState } from "react");
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -10,9 +9,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [username, setUsername] = useState(""");
+  const [password, setPassword] = useState(""");
+  const [error, setError] = useState(""");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -25,7 +24,7 @@ const Login = () => {
     setTimeout(() => {
       setLoading(false);
       // Демо-данные для входа
-      if (username === "demo" && password === "demo") {
+      if ((username === "demo" && password === "demo") || (username === "User062025" && password === "demo")) {
         navigate("/dashboard");
       } else {
         setError("Неверный логин или пароль");
@@ -57,7 +56,7 @@ const Login = () => {
                       {error}
                     </div>
                   )}
-                  
+                   
                   <div className="space-y-2">
                     <Label htmlFor="username">Логин</Label>
                     <div className="relative">
@@ -75,7 +74,7 @@ const Login = () => {
                       />
                     </div>
                   </div>
-                  
+                   
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <Label htmlFor="password">Пароль</Label>
@@ -98,7 +97,7 @@ const Login = () => {
                       />
                     </div>
                   </div>
-                  
+                   
                   <Button 
                     type="submit" 
                     className="w-full bg-triumph-yellow text-triumph-black hover:bg-triumph-darkYellow"
@@ -116,7 +115,7 @@ const Login = () => {
                       </>
                     )}
                   </Button>
-                  
+                   
                   <div className="text-center mt-4">
                     <p className="text-sm text-gray-600">
                       У вас нет учетной записи?{" "}
