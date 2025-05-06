@@ -1,33 +1,37 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
+      id: "credit",
       title: "Кредитование",
       description: "Выгодные процентные ставки и быстрое одобрение кредитов для физических и юридических лиц",
       icon: "CreditCard",
-      link: "#"
+      link: "/services/credit"
     },
     {
+      id: "investments",
       title: "Вклады и инвестиции",
       description: "Разместите деньги под высокий процент или инвестируйте в перспективные проекты",
       icon: "LineChart",
-      link: "#"
+      link: "/services/investments"
     },
     {
+      id: "accounts",
       title: "Расчетные счета",
       description: "Удобное управление финансами для бизнеса с минимальными комиссиями",
       icon: "Wallet",
-      link: "#"
+      link: "/services/accounts"
     },
     {
+      id: "mortgage",
       title: "Ипотека",
       description: "Решение жилищного вопроса с комфортными условиями и низкими ставками",
       icon: "Home",
-      link: "#"
+      link: "/services/mortgage"
     }
   ];
 
@@ -52,8 +56,10 @@ const Services = () => {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-gray-600 mb-4">{service.description}</CardDescription>
-                <Button variant="link" className="p-0 text-triumph-black hover:text-triumph-yellow">
-                  Подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
+                <Button variant="link" className="p-0 text-triumph-black hover:text-triumph-yellow" asChild>
+                  <Link to={service.link}>
+                    Подробнее <Icon name="ArrowRight" size={16} className="ml-1" />
+                  </Link>
                 </Button>
               </CardContent>
             </Card>
@@ -61,8 +67,10 @@ const Services = () => {
         </div>
         
         <div className="mt-12 text-center">
-          <Button className="bg-triumph-black text-white hover:bg-triumph-gray">
-            Все услуги <Icon name="ChevronRight" size={18} className="ml-1" />
+          <Button className="bg-triumph-black text-white hover:bg-triumph-gray" asChild>
+            <Link to="/apply">
+              Подать заявку <Icon name="ChevronRight" size={18} className="ml-1" />
+            </Link>
           </Button>
         </div>
       </div>
