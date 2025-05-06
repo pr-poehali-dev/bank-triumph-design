@@ -9,9 +9,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [username, setUsername] = useState(""");
+  const [password, setPassword] = useState(""");
+  const [error, setError] = useState(""");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -24,8 +24,7 @@ const Login = () => {
     setTimeout(() => {
       setLoading(false);
       // Демо-данные для входа
-      if ((username === "demo" && password === "demo") || 
-          (username === "User062025" && password === "Postavtepyat")) {
+      if ((username === "demo" && password === "demo") || (username === "User062025" && password === "demo")) {
         navigate("/dashboard");
       } else {
         setError("Неверный логин или пароль");
@@ -125,9 +124,7 @@ const Login = () => {
                       </a>
                     </p>
                     <div className="text-xs mt-2 text-gray-500">
-                      Для демо-входа используйте: 
-                      <br />логин <strong>User062025</strong>, пароль <strong>Postavtepyat</strong>
-                      <br />или логин <strong>demo</strong>, пароль <strong>demo</strong>
+                      Для демо-входа используйте: логин <strong>demo</strong>, пароль <strong>demo</strong>
                     </div>
                   </div>
                 </form>
